@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="btn-group pull-right">
+      <%= render 'common_buttons', bookmark: @bookmark %>
+    </div>
+    <h1><%= @bookmark.title %></h1>
+    <div class="row">
+      <div class="col-md-9">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="glyphicon glyphicon-link"></span>
+            <%= link_to nil, @bookmark.url %>
+          </li>
+
+          <% if @bookmark.comment.present? %>
+            <li class="list-group-item">
+              <span class="glyphicon glyphicon-comment"></span>
+              <%= @bookmark.comment %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <ul class="list-group text-muted">
+          <li class="list-group-item">
+            <span class="glyphicon glyphicon-tag"></span>
+            <%= link_to @bookmark.category, bookmarks_path(category: @bookmark.category) %>
+          </li>
+
+          <% if @bookmark.is_favorite %>
+            <li class="list-group-item">
+              <span class="glyphicon glyphicon-heart"></span> Favorite
+            </li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+</div>

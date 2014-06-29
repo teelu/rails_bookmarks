@@ -1,0 +1,6 @@
+<%= link_to edit_bookmark_path(bookmark), class: 'btn btn-default' do %>
+  <span class="glyphicon glyphicon-pencil"></span> Edit
+<% end %>
+<%= link_to bookmark, method: :delete, class: 'btn btn-default', data: { confirm: 'Really delete this bookmark?' } do %>
+  <span class="glyphicon glyphicon-remove"></span>
+<% end %>
