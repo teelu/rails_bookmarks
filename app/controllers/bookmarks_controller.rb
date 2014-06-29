@@ -25,6 +25,12 @@ class BookmarksController < ApplicationController
     save_bookmark_or_render(:edit)
   end
 
+  def destroy
+    @bookmark.destroy!
+    flash[:success] = 'Bookmark deleted.'
+    redirect_to bookmarks_path
+  end
+
   private
 
   def selected_category
