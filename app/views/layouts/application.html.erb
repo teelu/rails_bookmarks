@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Bookmarkr</a>
+          <%= link_to 'Bookmarkr', root_path, class: 'navbar-brand' %>
         </div>
 
         <ul class="nav navbar-nav">
@@ -24,9 +24,9 @@
               <span class="glyphicon glyphicon-chevron-down"></span> Categories
             </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Serious</a></li>
-              <li><a href="#">Funny</a></li>
-              <li><a href="#">Useful</a></li>
+              <% Bookmark::CATEGORIES.each do |category| %>
+                <li><%= link_to category, bookmarks_path(category: category) %></li>
+              <% end %>
             </ul>
           </li>
           <li>
