@@ -1,0 +1,26 @@
+<tr>
+  <td class="lead text-muted">
+    <% if bookmark.is_favorite %>
+      <span class="glyphicon glyphicon-heart"></span>
+    <% end %>
+  </td>
+  <td class="lead text-muted">
+    <% if bookmark.comment.present? %>
+      <span class="glyphicon glyphicon-comment"></span>
+    <% end %>
+  </td>
+  <td class="lead">
+    <%= link_to bookmark.title, bookmark.url %>
+  </td>
+  <% if params[:category].blank? %>
+    <td class="lead text-muted"><%= bookmark.category %></td>
+  <% end %>
+  <td>
+    <div class="btn-group">
+      <%= link_to bookmark, class: 'btn btn-default' do %>
+        <span class="glyphicon glyphicon-eye-open"></span> View
+      <% end %>
+      <%= render 'buttons', bookmark: bookmark %>
+    </div>
+  </td>
+</tr>
