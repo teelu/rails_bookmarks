@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.3"
 
 gem 'rails', '4.2.0.beta2'
 gem 'pg'
@@ -15,6 +16,7 @@ group :development, :test do
   gem 'shoulda-matchers'
 
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
+  # https://github.com/deivid-rodriguez/pry-byebug
   gem 'pry-byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
