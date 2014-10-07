@@ -14,6 +14,8 @@ The app root should show a list of all my bookmarks, sorted by title. URL and co
 
 Since this is a decently-sized project, put some polish into it! The details of how to display the needed information are up to you &ndash; make your bookmarker a product someone would actually want to use. If you're feeling ambitious, you can try a CSS framework like [Bootstrap](http://getbootstrap.com/getting-started) or [Foundation](http://foundation.zurb.com/docs/applications.html).
 
+The *only* thing you can use a generator for, is creating new migrations. Scaffolding or other generators give -10 points to Ravenclaw. 
+
 One more thing: Make sure you provide some working seed data so we can easily test your app without typing in a bunch of bookmarks. Pulling down a fresh copy of your app and running `rake db:setup` should not give any errors.
 
 ## Specifications
