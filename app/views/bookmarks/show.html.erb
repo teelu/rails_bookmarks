@@ -4,3 +4,7 @@
   <dt>Favorite: </dt><dd><%= @bookmark.favorite %></dd>
   <dt>Comment: </dt><dd><%= @bookmark.comment %></dd>
 </dl>
+
+<%= link_to 'Delete',
+        {controller: :bookmarks, action: :destroy, id: @bookmark },
+        method: :delete %>
