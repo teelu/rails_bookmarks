@@ -8,3 +8,5 @@
 <%= link_to 'Delete',
         {controller: :bookmarks, action: :destroy, id: @bookmark },
         method: :delete %>
+
+<%= link_to 'Edit', edit_bookmark_path(@bookmark) %>
