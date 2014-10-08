@@ -46,6 +46,7 @@ Make use of the `has_many` relationship to add the ability of commenting on each
 * Edit a comment on another page
 * View a specific singular comment
 * See the number of comments each Bookmark has on the Bookmark index
+* When you delete a bookmark, make it so that the comments are automatically deleted
 
 ## Extra Challenges
 
