@@ -11,6 +11,14 @@ class BookmarksController < ApplicationController
   def edit
   end
 
+  def update
+    if @bookmark.update_attributes(bookmark_params)
+      redirect_to action: :index
+    else
+      render :edit
+    end
+  end
+
   def new
     @bookmark = Bookmark.new
   end
