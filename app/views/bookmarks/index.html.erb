@@ -1,3 +1,9 @@
-<% @bookmarks.each do |bookmark| %>
-  <%= bookmark.title %>
-<% end %>
+<div>
+  <% @bookmarks.each do |bookmark| %>
+    <div class='bookmark'>
+      <%= bookmark.title %>
+      <% unless bookmark.comment.empty? %> * <% end %>
+      <% if bookmark.favorite %> (f) <% end %>
+    </div>
+  <% end %>
+</div>
