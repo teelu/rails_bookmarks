@@ -2,6 +2,7 @@
   <% @bookmarks.each do |bookmark| %>
     <div class='bookmark'>
       <%= link_to bookmark.title, bookmark.url %>
+      <%= link_to "(more)", bookmark_path(bookmark) %>
       <% unless bookmark.comment.empty? %> * <% end %>
       <% if bookmark.favorite %> (f) <% end %>
     </div>
