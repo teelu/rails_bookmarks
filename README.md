@@ -2,6 +2,10 @@
 
 *"Who got this CRUD all over my bookmarks?"*
 
+This is a 2-day Homework, with tasks for Day 1, and separate tasks for Day 2.
+
+## Day 1
+
 Create a Rails app that allows me to track my bookmarks! Bookmarks have:
 
 * a URL (required, must start with "http")
@@ -18,7 +22,7 @@ The *only* thing you can use a generator for, is creating new migrations. Scaffo
 
 One more thing: Make sure you provide some working seed data so we can easily test your app without typing in a bunch of bookmarks. Pulling down a fresh copy of your app and running `rake db:setup` should not give any errors.
 
-## Specifications
+### Specifications
 
 * App has a database schema with appropriate columns and indexes
 * App has working seed data that creates a variety of bookmarks
@@ -33,8 +37,18 @@ One more thing: Make sure you provide some working seed data so we can easily te
 * Code follows style conventions and has descriptive variable and method names
 * Repository has clean, logical, single-task commits with descriptive messages
 
+## Day 2
+
+Make use of the `has_many` relationship to add the ability of commenting on each bookmark. A user should be able to:
+
+* View all comments on a bookmark on the bookmark's show page. 
+* Delete a comment
+* Edit a comment on another page
+* View a specific singular comment
+* See the number of comments each Bookmark has on the Bookmark index
+
 ## Extra Challenges
 
 * Instead of the real URL, link bookmark titles to another path within your app that redirects to the real URL and increments a click-tracking counter. This will allow me to share specific bookmarks with friends and track their popularity.
-* A bookmark can have many comments
+* Comments can have sub-comments in a nested manner similar to Reddit or Hacker News. 
 * Extra points will be awarded for crafting an impressive and attractive user experience that makes use of a CSS framework such as Bootstrap or Foundation.
