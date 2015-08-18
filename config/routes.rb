@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   get '/' => 'bookmarks#index'
   get '/bookmarks' => 'bookmarks#index'
   post '/bookmarks' => 'bookmarks#create'
-  patch '/bookmarks/:id' => 'bookmarks#edit'
-  put '/bookmarks/:id' => 'bookmarks#edit'
+  patch '/bookmarks/:id' => 'bookmarks#update'
+  put '/bookmarks/:id' => 'bookmarks#update'
   delete '/bookmarks/:id' => 'bookmarks#delete'
-  get '/bookmarks/:category' => 'bookmarks#category_list'
-  get '/bookmarks/favorite' => 'bookmarks#favorite'
+  get '/:category' => 'bookmarks#category_list'
+  get '/favorite' => 'bookmarks#favorite'
 end
