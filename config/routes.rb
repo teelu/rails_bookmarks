@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   patch '/bookmarks/:id' => 'bookmarks#update'
   put '/bookmarks/:id' => 'bookmarks#update'
   delete '/bookmarks/:id' => 'bookmarks#delete'
-  get '/:category' => 'bookmarks#category_list'
+  get '/bookmarks/category/:category' => 'bookmarks#category_list'
   get '/favorite' => 'bookmarks#favorite'
 end
