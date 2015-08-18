@@ -82,4 +82,4 @@ production:
   <<: *default
   database: wdi_8_rails_hw_bookmarks_production
   username: wdi_8_rails_hw_bookmarks
-  password: <%= ENV['WDI_4_RAILS_HW_BOOKMARKS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['WDI_8_RAILS_HW_BOOKMARKS_DATABASE_PASSWORD'] %>
